@@ -1,19 +1,18 @@
 <body>
 <h1><p class="countdown">Voting</p></h1>
 <div class="inner-content">
-<script charset="utf-8" type="text/javascript" src="https://static.polldaddy.com/p/9794855.js"></script>
+<script charset="utf-8" type="text/javascript" src="https://static.polldaddy.com/p/=9932855.js"></script>
 </div>
 </body>
 
 <script>
 alert = function () { };
 function select() {
-    radio = document.getElementById('PDI_answer44811670');
-    vote_btn = document.getElementById('pd-vote-button9794855');
+    radio = document.getElementById('PDI_answer45528428');
+    vote_btn = document.getElementById('pd-vote-button9932855');
     back_btn = document.querySelector('a.pds-return-poll');
 	res_text = document.querySelector('div.pds-question-top');
 }
-
 function eventFire(el, etype){
   if (el.fireEvent) {
     el.fireEvent('on' + etype);
@@ -24,15 +23,12 @@ function eventFire(el, etype){
     el.dispatchEvent(evObj);
   }
 }
-
 function sleep( sleepDuration ){
     var now = new Date().getTime();
     while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
 }
-
 var votes = 24;
 var time = -1;
-
 setInterval(function () {
     select();
     try {
@@ -41,7 +37,6 @@ setInterval(function () {
 		votes++;
     } catch (e) { }
 }, 1000);
-
 setInterval(function () {
     select();
 	
@@ -64,9 +59,7 @@ setInterval(function () {
 	try { back_btn.click(); } catch (e) { }
 		
 }, 1000, 500);
-
 setInterval(function() {
-
   
     document.querySelector("p.countdown").innerHTML = "Voting";
 	if (time > 0) {
@@ -74,7 +67,6 @@ setInterval(function() {
 		document.querySelector("p.countdown").innerHTML = "Prepairing to Vote: " + time;
 	}
 }, 1000);
-
 setInterval(function () {window.location.reload()}, 10*60000);
 </script>
 
